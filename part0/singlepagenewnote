@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+
+    Note right of browser: The browser executes the callback function that adds the new note to the array and renders the notes 
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server reads the new note and store it in the notes array with the date
+    server-->>browser: status code 201 created
+    deactivate server

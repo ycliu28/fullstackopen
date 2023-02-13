@@ -1,0 +1,3 @@
+a core philosophy of React is composing applications from many specialized reusable components
+
+Another strong convention is the idea of a root component called App at the top of the component tree of the application.
